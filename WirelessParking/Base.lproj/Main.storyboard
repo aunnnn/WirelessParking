@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5jR-f7-Jr2">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="pNW-Pr-Z2t">
+            <objects>
+                <viewController id="5jR-f7-Jr2" customClass="ViewController" customModule="WirelessParking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hhe-bx-hML"/>
+                        <viewControllerLayoutGuide type="bottom" id="tOm-Jj-RO8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PIH-o7-ZMJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDT-r2-rFM" customClass="BoardView" customModule="WirelessParking" customModuleProvider="target">
+                                <rect key="frame" x="96" y="148" width="408" height="365"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SDT-r2-rFM" secondAttribute="height" multiplier="408:365" id="sTJ-g6-JYp"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking Lot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="485-Ab-ODN">
+                                <rect key="frame" x="249" y="111" width="102" height="22"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozo-2F-u96">
+                                <rect key="frame" x="219" y="528" width="162" height="47"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.42766975270000002" green="0.60213962030000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="8Mg-KK-byb"/>
+                                    <constraint firstAttribute="height" constant="47" id="ZUu-BF-TzK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <state key="normal" title="Update Free Spaces">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateFreeSpacesButtonPushed:" destination="5jR-f7-Jr2" eventType="touchUpInside" id="Ysv-7L-mU1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Port: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXA-vE-lYq">
+                                <rect key="frame" x="42" y="38" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1337" borderStyle="roundedRect" placeholder="Insert port number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Etq-mk-n4V">
+                                <rect key="frame" x="87" y="34" width="170" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="P07-o3-fdH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfj-LG-9jn">
+                                <rect key="frame" x="268" y="34" width="51" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="2M9-GT-upO"/>
+                                </constraints>
+                                <state key="normal" title="Set"/>
+                                <connections>
+                                    <action selector="updatePortNumberButtonPushed:" destination="5jR-f7-Jr2" eventType="touchUpInside" id="q6Y-ce-2v5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latest Message: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnp-2E-O8R">
+                                <rect key="frame" x="42" y="82" width="130" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuh-ZO-tal">
+                                <rect key="frame" x="412" y="537" width="92" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="Uk6-3H-jt9"/>
+                                </constraints>
+                                <state key="normal" title="update board"/>
+                                <connections>
+                                    <action selector="updateBoardButtonPushed:" destination="5jR-f7-Jr2" eventType="touchUpInside" id="3vT-i5-2pG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SDT-r2-rFM" firstAttribute="leading" secondItem="PIH-o7-ZMJ" secondAttribute="leadingMargin" constant="76" id="5oY-nC-k6a"/>
+                            <constraint firstItem="Ozo-2F-u96" firstAttribute="centerX" secondItem="PIH-o7-ZMJ" secondAttribute="centerX" id="9ul-e6-gV8"/>
+                            <constraint firstItem="SDT-r2-rFM" firstAttribute="top" secondItem="wnp-2E-O8R" secondAttribute="bottom" constant="45" id="BEw-K2-XSZ"/>
+                            <constraint firstItem="SXA-vE-lYq" firstAttribute="leading" secondItem="PIH-o7-ZMJ" secondAttribute="leadingMargin" constant="22" id="Bbu-WR-NY3"/>
+                            <constraint firstItem="485-Ab-ODN" firstAttribute="centerX" secondItem="SDT-r2-rFM" secondAttribute="centerX" id="T0h-pD-FTM"/>
+                            <constraint firstItem="wuh-ZO-tal" firstAttribute="centerY" secondItem="Ozo-2F-u96" secondAttribute="centerY" id="Y1e-PF-QeG"/>
+                            <constraint firstItem="wuh-ZO-tal" firstAttribute="leading" secondItem="Ozo-2F-u96" secondAttribute="trailing" constant="31" id="Ycv-58-aUb"/>
+                            <constraint firstItem="Etq-mk-n4V" firstAttribute="top" secondItem="nfj-LG-9jn" secondAttribute="top" id="Ypk-WI-W51"/>
+                            <constraint firstItem="485-Ab-ODN" firstAttribute="top" secondItem="hhe-bx-hML" secondAttribute="bottom" constant="91" id="Zj4-Hx-V61"/>
+                            <constraint firstItem="SDT-r2-rFM" firstAttribute="top" secondItem="485-Ab-ODN" secondAttribute="bottom" constant="15" id="mBt-4Z-X9I"/>
+                            <constraint firstItem="Etq-mk-n4V" firstAttribute="leading" secondItem="SXA-vE-lYq" secondAttribute="trailing" constant="3" id="odo-P7-e5p"/>
+                            <constraint firstItem="Etq-mk-n4V" firstAttribute="top" secondItem="hhe-bx-hML" secondAttribute="bottom" constant="14" id="rkI-AV-9nB"/>
+                            <constraint firstItem="nfj-LG-9jn" firstAttribute="leading" secondItem="Etq-mk-n4V" secondAttribute="trailing" constant="11" id="tBg-yL-BdG"/>
+                            <constraint firstItem="Ozo-2F-u96" firstAttribute="centerX" secondItem="SDT-r2-rFM" secondAttribute="centerX" id="v8N-HE-Z3l"/>
+                            <constraint firstItem="nfj-LG-9jn" firstAttribute="baseline" secondItem="SXA-vE-lYq" secondAttribute="baseline" id="x73-YS-8Yv"/>
+                            <constraint firstItem="wnp-2E-O8R" firstAttribute="leading" secondItem="SXA-vE-lYq" secondAttribute="leading" id="xyu-JX-3t2"/>
+                            <constraint firstItem="wnp-2E-O8R" firstAttribute="top" secondItem="Etq-mk-n4V" secondAttribute="bottom" constant="18" id="ySv-nh-Ql5"/>
+                            <constraint firstItem="tOm-Jj-RO8" firstAttribute="top" secondItem="Ozo-2F-u96" secondAttribute="bottom" constant="25" id="z29-as-iLm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="latestMessageLabel" destination="wnp-2E-O8R" id="kmo-g4-Cbs"/>
+                        <outlet property="portnumTextField" destination="Etq-mk-n4V" id="Srh-xZ-XaN"/>
+                        <outlet property="spaceBoardView" destination="SDT-r2-rFM" id="FjL-ca-ord"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAb-SU-gI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540" y="420"/>
+        </scene>
+    </scenes>
+</document>
