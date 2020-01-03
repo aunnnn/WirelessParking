@@ -2,9 +2,7 @@
 //  NetworkUtilities.swift
 //  TestWirelessNetworking
 //
-//  Created by Wirawit Rueopas on 11/7/2558 BE.
-//  Copyright © 2558 Wirawit Rueopas. All rights reserved.
-//
+//  Note: Majority of the code is NOT mine. It's been awhile, I believe I stitched them together from StackOverflow's answers.
 
 import Foundation
 
